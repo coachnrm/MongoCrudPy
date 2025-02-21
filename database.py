@@ -9,6 +9,8 @@ DB_CONFIG = {
     "db": "DemoDB",
 }
 
+#อย่าลืมสร้าง table Customer.sql script ด้วย
+
 async def get_db():
     pool = await aiomysql.create_pool(**DB_CONFIG)
     async with pool.acquire() as conn:
